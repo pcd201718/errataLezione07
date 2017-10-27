@@ -50,7 +50,7 @@ public class VisibilitaTraInner {
  * Esempio#1 - campo dati statico e classe interna di istanza: dichiarata una classe Inner1 con un campo dati marcato static e final. Il Mondo (main), Outer 
  * (accediA_XDiInner1), Inner2(costrutore) possono accedere al riferimento a Inner1.x (static e final). 
  * Morale: posso dichiarare campi dati statici in una classe interna di istanza "se e solo se" marcati come final. La raggione e che marcando il campo finale 
- * si puo' dare un interpretazione classica del significato del campo statico come COMUNE a tutte le instanze di Inner rachiuse nella istanze di Outer.
+ * si puo' dare un interpretazione classica del significato del campo statico come COMUNE a tutte le instanze di Inner rachiuse nelle istanze Outer.
  * Se si omete il marcatore 'final' per il campo dati statico il significato di "x" sarebbe ambiguo:
  * 	(1) x e' un campo dati statico e comune a tutte le istanza di inner rachiuse in un istanza di outer oppure
  *  (2) x e' un campo dati statico comune a tutte le istanza di Inner - diverse Outer hanno una coppia propria!
