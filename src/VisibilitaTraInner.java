@@ -4,7 +4,8 @@
  * Errata#1: Visibilita' tra Inner di istanza: Prima costruisco un oggetto del tipo (i.e., Inner1, Inner2),
  * anche se i campi dichiarati "private" sono accessibili direttamente usando il loro riferimento.
  * Morale: questo comportamento e diverso da quanto annunciato a lezione dove gli oggetti interni possono 
- * "accedere ai campi solo tramite i metodi propri definite nelle classi".
+ * "accedere ai campi solo tramite i metodi propri definite nelle classi". 
+ * Perche' cio e' possibile? Perche' un istanza Inner ha un riferimento implicito alla classe che la rachiude.
  */
 public class VisibilitaTraInner {
 	
@@ -52,7 +53,7 @@ public class VisibilitaTraInner {
  * Morale: posso dichiarare campi dati statici in una classe interna di istanza "se e solo se" marcati come final. La raggione e che marcando il campo finale 
  * si puo' dare un interpretazione classica del significato del campo statico come COMUNE a tutte le instanze di Inner rachiuse nelle istanze Outer.
  * Se si omete il marcatore 'final' per il campo dati statico il significato di "x" sarebbe ambiguo:
- * 	(1) x e' un campo dati statico e comune a tutte le istanza di inner rachiuse in un istanza di outer oppure
+ *  (1) x e' un campo dati statico e comune a tutte le istanza di inner rachiuse in un istanza di outer oppure
  *  (2) x e' un campo dati statico comune a tutte le istanza di Inner - diverse Outer hanno una coppia propria!
  * 
  */
